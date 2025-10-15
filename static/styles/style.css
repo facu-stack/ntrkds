@@ -1,11 +1,7 @@
 body {
-    background-color: lightblue;
-    height: 100vh; /* ocupa toda la pantalla */
-    display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center; /* centra verticalmente */
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -120,7 +116,24 @@ h1, h3 {
 
 /* profesionales */
 
+.headerProfesional{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  font-size: large;
+  padding: 10px 20px;
+  margin-bottom: -10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
 .card {
+  margin-top: 150px;
   background: #fff;
   border-radius: 15px;
   padding: 20px;
@@ -318,3 +331,83 @@ h1, h3 {
 .paciente img{
   height: 250px;
 }
+
+/* Formulario */
+.formHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  font-size: large;
+  padding: 10px 20px;
+  margin-bottom: -10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.formularioRegistro{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* grilla */
+
+.grilla body{
+  display: flex;
+
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 10px;
+  justify-content: center;
+
+ 
+}
+.horario {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.horario:hover {
+  background-color: #e6f7ff;
+}
+
+.ocupado {
+  background-color: #ff4d4d;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seleccionado {
+  background-color: #32cd32;
+  color: white;
+}
+
+.leyenda {
+  margin-top: 20px;
+}
+
+.cuadro {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border: 2px solid #ccc;
+}
+
+.libre { background-color: white; }
+.ocupado-cuadro { background-color: #ff4d4d; }
+.seleccionado-cuadro { background-color: #32cd32; }
+
+
+
+
