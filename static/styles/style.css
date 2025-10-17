@@ -113,6 +113,29 @@ h1, h3 {
   margin-top: -130px;
 }
 
+.Mision{
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  bottom: 200px;
+  margin-left: 10px;
+  margin-top: 150px;
+  right: 60px;
+  width: 90%;
+  border-radius: 30px;
+}
+
+.Vision{
+  background-color: white;
+  position: fixed;
+  top: 100px;
+  bottom: 200px;
+  margin-left: 10px;
+  margin-top: 150px;
+  right: 60px;
+  width: 90%;
+  border-radius: 30px;  
+}
 
 /* profesionales */
 
@@ -407,6 +430,7 @@ h1, h3 {
 .libre { background-color: white; }
 .ocupado-cuadro { background-color: #ff4d4d; }
 .seleccionado-cuadro { background-color: #32cd32; }
+
 
 
 
