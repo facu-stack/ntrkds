@@ -1,12 +1,12 @@
-from flask import flask, g, render_template, request, redirect, url_for, session, flash, jsonify
+from flask import Flask, g, render_template, request, redirect, url_for, session, flash, jsonify
 import sqlalchemy
 import os 
-import _mysql_connector as mysql
+import mysql.connector  # <- Usá este, no "_mysql_connector"
 
-app = flask("Nutrikids-proyecto", template_folder='templates')
+app = Flask("Nutrikids-proyecto", template_folder='templates')
 app.secret_key = "tu_clave_secreta"
 
-#conexion de la base de datos desde railway
+# Conexión de la base de datos desde Railway
 app.config['DATABASE_URL'] = os.getenv('MYSQL_URL')
 
 def get_db_connection():
@@ -20,12 +20,29 @@ def get_db_connection():
     return conn
 
 
-#ruta principal 
+# Ruta principal 
 @app.route('/')
 def index():
-    return render_template('index.hmtl') 
+    return render_template('index.html')
 
+# ruta para registrarse
 
-#ruta para el html de agenda 
+@app.route('/')
+def formulario():
+    return render_template('formulario.html')
+
+@app.route('/')
+def PaginaPrincipal():
+    return render_template('PaginaPrincipal.html')
+
+# Ruta para el html de agenda 
+@app.route('/agenda')
 def agenda():
     return render_template('agenda.html')
+
+
+
+
+# Ejecutar la aplicación
+if __name__ == '__main__':
+    app.run(debug=True)
