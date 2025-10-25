@@ -13,7 +13,8 @@
     </header>
   </div>
 
-  <form action="confirmacion.html" method="POST" class="form">
+  <div class="formularioRegistro">
+    <<form action="{{ url_for('confirmacion') }}" method="POST" class="form">
     
     <h1>Datos del tutor</h1>
     
@@ -60,5 +61,9 @@
 
     <button type="submit" class="btn">Registrarse</button>
   </form>
+
+  </div>
+  
 </body>
 </html>
+
