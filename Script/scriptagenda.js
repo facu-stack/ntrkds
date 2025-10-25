@@ -1,13 +1,25 @@
-const fechas = [
-    "1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10", "8/10", "9/10", "10/10",
-    "11/10", "12/10", "13/10", "14/10", "15/10", "16/10", "17/10", "18/10", "19/10",
-    "20/10", "21/10", "22/10", "23/10", "24/10", "25/10", "26/10", "27/10", "28/10",
-    "29/10", "30/10", "31/10"
-];
-
-const ocupados = ["10/10", "15/10", "20/10"]; // ejemplo
 const grilla = document.getElementById("grilla");
+const ocupados = ["10/10", "15/10", "20/10"]; // ejemplo
 
+// Función para generar los próximos 30 días desde hoy
+function generarFechas(dias = 30) {
+    const fechas = [];
+    const hoy = new Date();
+
+    for (let i = 0; i < dias; i++) {
+        const fecha = new Date(hoy);
+        fecha.setDate(hoy.getDate() + i);
+        const dia = fecha.getDate();
+        const mes = fecha.getMonth() + 1;
+        fechas.push(`${dia}/${mes}`);
+    }
+
+    return fechas;
+}
+
+const fechas = generarFechas(30);
+
+// Crear la grilla
 fechas.forEach(fecha => {
     const div = document.createElement("div");
     div.textContent = fecha;
@@ -22,6 +34,6 @@ fechas.forEach(fecha => {
         });
     }
 
-   
     grilla.appendChild(div);
 });
+
