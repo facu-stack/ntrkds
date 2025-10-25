@@ -20,29 +20,30 @@ def get_db_connection():
     return conn
 
 
-# Ruta principal 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# ruta para registrarse
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
-@app.route('/')
+@app.route('/formulario')
 def formulario():
     return render_template('formulario.html')
 
-@app.route('/')
-def PaginaPrincipal():
-    return render_template('PaginaPrincipal.html')
+@app.route("/confirmacion", methods=["POST"])
+def confirmacion():
+    # Acá procesás los datos del formulario
+    nombre = request.form.get("nombre")
+    edad = request.form.get("edad")
+    # ... lo que necesites hacer ...
+    return render_template("confirmacion.html", nombre=nombre, edad=edad)
 
-# Ruta para el html de agenda 
-@app.route('/agenda')
-def agenda():
-    return render_template('agenda.html')
+@app.route('/home')
+def home():
+    return render_template("PaginaPrincipal.html")
 
-
-
-
-# Ejecutar la aplicación
 if __name__ == '__main__':
     app.run(debug=True)
+
