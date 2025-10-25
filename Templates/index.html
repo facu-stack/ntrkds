@@ -9,31 +9,42 @@
 
     </head>
 
-    <div>
-        <div class="header">
-            <ol>
-                <div class="logo"><img src="../static/Images/Logo.png"  alt="Logo" width="80" height="80"> <h1>NutriKids</h1></h1></div>
-                <div class="slogan"><h6>infancias bien nutridas</h6></div>
-                <button class="inicioSecion" onclick="location.href='login.html'">
-                    <p>Iniciar sesión</p>
-                </button>
-                <button class="Registrarse" onclick="location.href='formulario.html'">
-                    <p>Registrarse</p>
-                    
-                </button>
-            </ul>
-        </div>
+    <div class="header">
+        <ol>
+            <div class="logo">
+            <img src="{{ url_for('static', filename='Images/Logo.png') }}" alt="Logo" width="80" height="80">
+            <h1>NutriKids</h1>
+            </div>
+            <div class="slogan">
+            <h6>Infancias bien nutridas</h6>
+            </div>
+
+            <button class="inicioSeccion" onclick="location.href='{{ url_for('login') }}'">
+            <p>Iniciar sesión</p>
+            </button>
+
+            <button class="registrarse" onclick="location.href='{{ url_for('formulario') }}'">
+            <p>Registrarse</p>
+            </button>
+        </ol>
+    </div>
+
 
     </div>
 
-    <div class="CardNosotros">
+     <div class="CardNosotros">
         <h2>
             Hace tu consulta con tu Nutricionista de confianza.
         </h2>
         <img src="../static/Images/pexels-alex-green-5692220.jpg">
-        <div class="Mision:">Brindar una herramienta web accesible que facilite la gestión de turnos y consultas entre padres, tutores y profesionales de la salud infantil. Buscamos optimizar el tiempo de atención, mejorar el seguimiento nutricional y fomentar la prevención de la malnutrición mediante un sistema simple, confiable y adaptable a las necesidades de cada usuario.</div>
-        <div class="Vision:">Ser la plataforma líder en salud infantil digital, promoviendo el acceso rápido, seguro y eficiente a nutricionistas y pediatras, contribuyendo al bienestar y desarrollo saludable de los niños a través de la tecnología y la innovación.</div>
+        <p>Brindar una herramienta web accesible que facilite la gestión de turnos y consultas entre padres, tutores y profesionales de la salud infantil. Buscamos optimizar el tiempo de atención, mejorar el seguimiento nutricional y fomentar la prevención de la malnutrición mediante un sistema simple, confiable y adaptable a las necesidades de cada usuario. 
+        Ser la plataforma líder en salud infantil digital, promoviendo el acceso rápido, seguro y eficiente a nutricionistas y pediatras, contribuyendo al bienestar y desarrollo saludable de los niños a través de la tecnología y la innovación.</p>
+        
     </div>
 
 
 </html>
+
+
+</html>
+
