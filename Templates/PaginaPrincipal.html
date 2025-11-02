@@ -1,32 +1,39 @@
+<!DOCTYPE html>
 <html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Bienvenido/a a NutriKids!</title>
+  <link rel="stylesheet" href="../static/styles/style.css">
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Bienvenido/a a Nutrikids!</title>
-        <link rel="stylesheet" href="../static/styles/style.css">
+<body class="principalBody">
+  <!-- Header -->
+  <header class="HeaderInicio">
+    <div class="logo-container">
+      <img src="../static/Images/Logo.png" alt="Logo Nutrikids" width="70" height="70">
+      <div class="logo-text">
+        <h1>NutriKids</h1>
+        <p>Infancias bien nutridas</p>
+      </div>
+    </div>
 
-    </head>
+    <div class="IconoUsuario">
+      <img src="../static/Images/e622dea4-83a5-4591-9097-54ee670559da.png" alt="Usuario">
+    </div>
+  </header>
 
-    <body>
-        <div class="HeaderInico">
-            <div class="logo"><img src="../static/Images/Logo.png"  alt="Logo" width="80" height="80"> <h1>NutriKids</h1></h1></div>
-                <div class="slogan"><h6>infancias bien nutridas</h6></div>
-            <div class="IconoUsuario">
-                <img src="../static/Images/e622dea4-83a5-4591-9097-54ee670559da.png">
-            </div>
-        </div>
+  <!-- Contenido principal -->
+  <main class="contenedorPrincipal">
+    <div class="TarjetaPedirCita" onclick="location.href='{{ url_for('formulario') }}'">
+      <img src="../static/Images/Cita.png" alt="Cita">
+      <h2>Agendar un turno</h2>
+    </div>
 
-        <div class="TarjetaPedirCita">
-            <img src="../static/Images/Cita.png" alt="Cita">
-            <h2>
-                Agendar un turno
-            </h2>
-        </div>
-        <div class="paciente">
-            <img src="../static/Images/Estadistica.png" alt="paciente">
-            <h2>
-                Datos del paciente
-            </h2>
-        </div>
+    <div class="TarjetaPedirCita" onclick="location.href='{{ url_for('paciente') }}'">
+      <img src="../static/Images/Estadistica.png" alt="Paciente">
+      <h2>Datos del paciente</h2>
+    </div>
+  </main>
 
-    </body>
+</body>
+</html>
