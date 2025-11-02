@@ -229,53 +229,71 @@ h1, h3 {
   top: 100px;
 }
 
-/*login*/
+/* registro */
 
-.cardInicioSecion{
+.formHeader{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.formularioRegistro, .datosdelpaciente {
   background-color: white;
   width: 400px;
-  padding: 40px;
-  border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-
-.cardInicioSecion label{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 23px;
-  text-align: left;
-  align-content: center;
+.form label {
   display: block;
-  text-align: center;
+  margin: 10px 0 5px;
 }
 
-.cardInicioSecion input{
-  align-content: center;
-  margin-left: 110px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  border-radius: 3px;
-  border-color: gray;
+.form input, .form select, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-.cardInicioSecion button{
+.confirm {
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  background-color: #5fa87f;
+  text-align: center;
+  padding: 50px;
+  border-radius: 50px;
+  width: 500px;
+  position: fixed;
+  left: 350px;
+  top: 100px;
+}
+
+.datosdelpaciente {
+  display: none;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 25px;
-  padding: 10px 25px;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: block;
-  margin: 20px auto; /* centra el botón horizontalmente */
 }
 
-.cardInicioSecion button:hover {
-  background-color: #4d926d;
-  transform: scale(1.05);
-}
+ button:hover {
+   background-color: #45a049;
+ }
+
 
 /*Pagina de inicio*/
 .HeaderInico{
@@ -430,6 +448,7 @@ h1, h3 {
 .libre { background-color: white; }
 .ocupado-cuadro { background-color: #ff4d4d; }
 .seleccionado-cuadro { background-color: #32cd32; }
+
 
 
 
