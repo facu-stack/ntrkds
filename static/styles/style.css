@@ -5,136 +5,130 @@ body {
 }
 
 
-/*index */
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(48, 132, 211);
-    font-size: large;
-    padding: 10px 20px;
-    margin-bottom: -10px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+body {
+  margin: 0;
+  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+  background-color: #a7d7e8;
 }
 
-.header ol{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    font-family:  "Arial Rounded MT Bold" , Arial, Helvetica, sans-serif;
-    align-items:center;
-    margin-top: -10px;
-    padding: 10px 20px;
+/*index*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  padding: 10px 40px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.logo h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
 }
 
 .header button {
-    background-color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family:  "Arial Rounded MT Bold" , Arial, Helvetica, sans-serif;
-
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .header button:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
-.header h1{
-  margin-top: 20px;
-}
-
-
-.logo{
-    display: flex;
-    align-items: flex-start;
-}
-
-
-.inicioSecion{
-    display: flex;
-    margin-left: 775px;
-}
-
-.Registrarse{
-    margin-left: 5px;
-}
-
-.slogan{
-    margin-bottom: -50px;
-    margin-left: -160px;
-    text-align: left;
-}
-
-
-
-h1, h3 {
-  margin: 10px 0;
-}
-
-.grid {
+/* CARD NOSOTROS */
+main {
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  place-items: center;
+  gap: 25px;
 }
 
-.CardNosotros{
+
+.CardNosotros {
   background-color: white;
-  position: fixed;
-  top: 100px;
-  bottom: 200px;
-  margin-left: 10px;
-  margin-top: 50px;
-  right: 60px;
-  width: 90%;
-  border-radius: 30px;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.CardNosotros img{
+.CardNosotros h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.CardNosotros .contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.CardNosotros img {
   width: 300px;
   border-radius: 10px;
-  margin-left: 60px;
+  flex-shrink: 0;
 }
 
-.CardNosotros h2{
-  margin-left: 50px;
+.CardContacto p {
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
 }
-
-.CardNosotros p{
-  margin-left: 380px;
-  margin-top: -130px;
-}
-
-.Mision{
+.CardContacto{
   background-color: white;
-  position: fixed;
-  top: 100px;
-  bottom: 200px;
-  margin-left: 10px;
-  margin-top: 150px;
-  right: 60px;
-  width: 90%;
-  border-radius: 30px;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.Vision{
-  background-color: white;
-  position: fixed;
-  top: 100px;
-  bottom: 200px;
-  margin-left: 10px;
-  margin-top: 150px;
-  right: 60px;
-  width: 90%;
-  border-radius: 30px;  
+.CardContacto img {
+  width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.CardContacto p {
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.CardContacto h2{
+  text-align: center;
+  margin-bottom: 25px;
+}
+.CardContacto .contenido{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* profesionales */
@@ -184,49 +178,6 @@ h1, h3 {
 
 .btn:hover {
   background: #4C8660;
-}
-
-/* registro */
-
-.formHeader{
-  font-family: Arial, Helvetica, sans-serif;
-  
-}
-
-.form {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 500px;
-  margin: 20px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin: 0 auto; /* centra el formulario */
-}
-
-
-.form label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-.form input, .form select, .form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-.confirm {
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  padding: 50px;
-  border-radius: 50px;
-  width: 500px;
-  position: fixed;
-  left: 350px;
-  top: 100px;
 }
 
 /* registro */
@@ -290,88 +241,182 @@ button {
   cursor: pointer;
 }
 
- button:hover {
-   background-color: #45a049;
- }
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* Fondo general */
+.loginBody {
+  background-color: #add8e6;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor del formulario */
+.cardInicioSesion {
+  background-color: white;
+  width: 380px;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: aparecer 0.8s ease;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cardInicioSesion h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Labels */
+.cardInicioSesion label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.cardInicioSesion input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardInicioSesion input:focus {
+  border-color: #5fa87f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(95, 168, 127, 0.5);
+}
+
+/* Botón */
+.inicioSesion {
+  width: 100%;
+  background-color: #5fa87f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inicioSesion:hover {
+  background-color: #4d926d;
+  transform: scale(1.05);
+}
 
 
 /*Pagina de inicio*/
-.HeaderInico{
+/* Fondo general */
+.principalBody {
+  background-color: #add8e6;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HEADER --- */
+.HeaderInicio {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(48, 132, 211);
-  font-size: large;
-  padding: 10px 20px;
-  margin-bottom: 0px;
-  height: 50px;
+  padding: 10px 30px;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.IconoUsuario{
-  position: fixed;
-  margin-left: 1170px;
-  margin-top: 20px;
-  margin-bottom: 20px; 
+/* Logo y texto */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.IconoUsuario img{
-  border-radius: 100%;
+.logo-text h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 13px;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+/* Icono de usuario */
+.IconoUsuario img {
+  border-radius: 50%;
   background-color: white;
-  height: 50px;
-  
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.HeaderInico img{
-  margin-top: 5px;
-  margin-bottom: 5px;
+.IconoUsuario img:hover {
+  transform: scale(1.1);
 }
 
-.HeaderInico h1{
-  margin-top: 20px;
-  margin-bottom: 30px;
-  
+/* --- TARJETAS PRINCIPALES --- */
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  gap: 40px;
 }
 
-.HeaderInico h6{
-  margin-right: 1067px;
-  margin-bottom: 80px;
-  margin-left: -13.35px;
-  margin-top: 70px;
-  text-align: left;
-}
-
-.TarjetaPedirCita{
-  background-color: white;
-  border-radius: 30px;
-  text-align: center;
-
-}
-
-.TarjetaPedirCita img{
-  height: 250px;
-}
-
-.paciente{
+.TarjetaPedirCita {
   background-color: white;
   border-radius: 30px;
   text-align: center;
-  margin-left: 50px;
+  width: 80%;
+  max-width: 700px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.paciente h2{
-  margin-right: 40px;
-  margin-left: 40px;
+.TarjetaPedirCita:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.paciente img{
-  height: 250px;
+.TarjetaPedirCita img {
+  height: 200px;
 }
+
+.TarjetaPedirCita h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #222;
+}
+
 
 /* Formulario */
 .formHeader{
@@ -423,13 +468,13 @@ button {
 }
 
 .ocupado {
-  background-color: #ff4d4d;
+  background-color: #ff4d4d !important;
   color: white;
   cursor: not-allowed;
 }
 
-.seleccionado {
-  background-color: #32cd32;
+.fechas.seleccionado {
+  background-color: #32cd32 !important;
   color: white;
 }
 
@@ -449,6 +494,18 @@ button {
 .ocupado-cuadro { background-color: #ff4d4d; }
 .seleccionado-cuadro { background-color: #32cd32; }
 
+.fechas{
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.fechas:hover{
+  background-color: #e6f7ff;
+}
 
 
 
