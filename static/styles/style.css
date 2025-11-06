@@ -75,6 +75,8 @@ main {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: aparecer 0.8s ease;
+
 }
 
 .CardNosotros h2 {
@@ -107,6 +109,8 @@ main {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: aparecer 0.8s ease;
+
 }
 
 .CardContacto img {
@@ -507,6 +511,7 @@ button:hover {
 .fechas:hover{
   background-color: #e6f7ff;
 }
+
 
 
 
