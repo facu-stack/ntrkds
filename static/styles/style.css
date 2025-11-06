@@ -82,6 +82,11 @@ main {
   margin-bottom: 25px;
 }
 
+.CardNosotros p{
+  margin-left: 320px;
+  margin-top: -170px;
+  text-align: justify;
+}
 .CardNosotros .contenido {
   display: flex;
   align-items: flex-start;
@@ -95,11 +100,7 @@ main {
   flex-shrink: 0;
 }
 
-.CardContacto p {
-  flex: 1;
-  line-height: 1.5;
-  text-align: justify;
-}
+
 .CardContacto{
   background-color: white;
   max-width: 1000px;
@@ -506,6 +507,7 @@ button:hover {
 .fechas:hover{
   background-color: #e6f7ff;
 }
+
 
 
 
