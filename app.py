@@ -47,3 +47,48 @@ def home():
 if __name__ == '__main__':
     app.run(debug=True)
 
+
+    @app.route('/registrar', methods=['POST'])
+    def registrar():
+    # Datos del paciente
+    nombre = request.form['nombre']
+    apellido = request.form['apellido']
+    dni = request.form['dni']
+    domicilio = request.form['domicilio']
+    localidad = request.form['localidad']
+    fecha_nacimiento = request.form['fecha_nacimiento']
+    ficha_medica = request.form['ficha_medica']
+
+    # Datos del tutor
+    nombre_tutor = request.form['nombre_tutor']
+    apellido_tutor = request.form['apellido_tutor']
+    direccion_tutor = request.form['direccion_tutor']
+    localidad_tutor = request.form['localidad_tutor']
+    telefono_tutor = request.form['telefono_tutor']
+    dni_tutor = request.form['dni_tutor']
+
+    conexion = get_db_connection()
+    cursor = conexion.cursor()
+
+    # Insertar paciente
+    cursor.execute("""
+        INSERT INTO pacientes (Nombre, Apellido, DNI, Domicilio, Localidad, FechaNacimiento, FichaMedica)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """, (nombre, apellido, dni, domicilio, localidad, fecha_nacimiento, ficha_medica))
+
+    # Insertar tutor
+    cursor.execute("""
+        INSERT INTO datos_tutor (Nombre, Apellido, Direccion, Localidad, Telefono, DNI)
+        VALUES (%s, %s, %s, %s, %s, %s)
+    """, (nombre_tutor, apellido_tutor, direccion_tutor, localidad_tutor, telefono_tutor, dni_tutor))
+
+    conexion.commit()
+    cursor.close()
+    conexion.close()
+
+    flash("Registro exitoso.")
+    return redirect(url_for('login'))
+
+
+
+
