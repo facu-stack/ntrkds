@@ -23,17 +23,11 @@
   </header>
 
   <!-- Contenido principal -->
-  <main class="contenedorPrincipal">
-    <div class="TarjetaPedirCita" onclick="location.href='{{ url_for('formulario') }}'">
-      <img src="../static/Images/Cita.png" alt="Cita">
-      <h2>Agendar un turno</h2>
-    </div>
-
-    <div class="TarjetaPedirCita" onclick="location.href='{{ url_for('paciente') }}'">
-      <img src="../static/Images/Estadistica.png" alt="Paciente">
-      <h2>Datos del paciente</h2>
-    </div>
+  <main class="contenedorPrincipal" id="contenedorPrincipal">
+    <!-- Se llenará dinámicamente -->
   </main>
 
+  <script src="../Script/paginaPrincipal.js"></script>
 </body>
 </html>
+
