@@ -1,20 +1,41 @@
 from flask import Flask, g, render_template, request, redirect, url_for, session, flash, jsonify
 import sqlalchemy
 import os 
-import mysql.connector  # <- Usá este, no "_mysql_connector"
+import mysql.connector  
 
 app = Flask("Nutrikids-proyecto", template_folder='templates')
 app.secret_key = "tu_clave_secreta"
 
-# Conexión de la base de datos desde Railway
-app.config['DATABASE_URL'] = os.getenv('MYSQL_URL')
+app.config["SLQALCHEMY_DATABASE"] = "sqlite://ntrkids.db"
+app.config["SLQALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db = sqlalchemy(app)
+
+class acceso(db.Model):
+    ID = db.column(db.Integer, Primary_key=True)
+    usuario = db.column(db.Varchar(45), nullable=False, unique=True)
+    contraseña = db.column(db.Varchar(45), nullable=False)
+
+class paciente(db.Model):
+    id = db.column(Primary_key=True) 
+    Domicilio = db.column(db.Varchar(45), nullable=False, unique=True)
+    Nombre = db.Column(db.Varchar(45), nullable=False)
+    Apellido = db.Column(db.Varchar(45),nullable=False)
+    FechaNacimiento = db.Column(db.Date)
+    DNI = db.Column(db.Integer, unique=True, nullable=False)
+    Localidad = db
+    
+
+
+
+
 
 def get_db_connection():
     conn = mysql.connector.connect(
-        host=os.getenv("RAILWAY_PRIVATE_DOMAIN"),
-        user=os.getenv("MYSQLUSER"),
-        password=os.getenv("MYSQL_ROOT_PASSWORD"),
-        database=os.getenv("MYSQL_DATABASE"),
+        host="localhost",
+        user="root",
+        password="12345",
+        database="ntrikids",
         port=3306  # MySQL usa el puerto 3306
     )
     return conn
@@ -24,9 +45,25 @@ def get_db_connection():
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        usuario = request.form['User']
+        contraseña = request.form['Contraseña']
+
+        if usuario == "paciente@gmail.com" and contraseña == "12345":
+            flash("Inicio de sesión exitoso ", "success")
+            return redirect(url_for('paginaprincipal'))  # ⬅ redirige acá
+        else:
+            flash("Usuario o contraseña incorrectos ", "error")
+            return redirect(url_for('login'))
+
     return render_template('login.html')
+
+@app.route('/paginaprincipal')
+def paginaprincipal():
+    return render_template('paginaprincipal')
+
 
 @app.route('/formulario')
 def formulario():
