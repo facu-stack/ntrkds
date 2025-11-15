@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>Bienvenido/a a NutriKids!</title>
-  <link rel="stylesheet" href="../static/styles/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 </head>
 
 <body class="principalBody">
-  <!-- Header -->
   <header class="HeaderInicio">
     <div class="logo-container">
-      <img src="../static/Images/Logo.png" alt="Logo Nutrikids" width="70" height="70">
+      <img src="{{ url_for('static', filename='Images/Logo.png') }}" width="70" height="70">
       <div class="logo-text">
         <h1>NutriKids</h1>
         <p>Infancias bien nutridas</p>
@@ -18,16 +17,20 @@
     </div>
 
     <div class="IconoUsuario">
-      <img src="../static/Images/e622dea4-83a5-4591-9097-54ee670559da.png" alt="Usuario">
+      <img src="{{ url_for('static', filename='Images/e622dea4-83a5-4591-9097-54ee670559da.png') }}">
     </div>
   </header>
 
-  <!-- Contenido principal -->
-  <main class="contenedorPrincipal" id="contenedorPrincipal">
-    <!-- Se llenará dinámicamente -->
+  <main>
+    <div class="contenedorTarjetas" id="contenedorPrincipal"></div>
   </main>
 
-  <script src="../Script/paginaPrincipal.js"></script>
+  <script>
+    const tipoUsuario = "{{ tipoUsuario }}";
+  </script>
+
+  <!-- 🟢 SCRIPT CORRECTO -->
+  <script src="{{ url_for('static', filename='Script/paginaPrincipal.js') }}"></script>
 </body>
 </html>
 
