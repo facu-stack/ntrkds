@@ -461,9 +461,9 @@ button:hover {
 }
 
 /* --- TARJETAS PRINCIPALES --- */
-.contenedorPrincipal {
+.contenedorTarjetas {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 120px;
@@ -474,9 +474,9 @@ button:hover {
   background-color: white;
   border-radius: 30px;
   text-align: center;
-  width: 80%;
+  width: 30%;
   max-width: 700px;
-  padding: 30px 20px;
+  padding: 30px 100px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -495,7 +495,6 @@ button:hover {
   font-size: 22px;
   color: #222;
 }
-
 
 /* Formulario */
 .formHeader{
@@ -585,6 +584,7 @@ button:hover {
 .fechas:hover{
   background-color: #e6f7ff;
 }
+
 
 
 
