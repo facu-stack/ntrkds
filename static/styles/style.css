@@ -5,11 +5,7 @@ body {
 }
 
 
-body {
-  margin: 0;
-  font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
-  background-color: #a7d7e8;
-}
+
 
 /*index*/
 .header {
@@ -18,7 +14,7 @@ body {
   align-items: center;
   background-color: rgb(48, 132, 211);
   padding: 10px 40px;
-  color: white;
+  color: white !important;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -54,6 +50,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  color: black;
 }
 
 .header button:hover {
@@ -68,7 +65,11 @@ main {
   gap: 25px;
 }
 
-
+.CardNosotros p{
+  margin-left: 320px;
+  margin-top: -170px;
+  text-align: justify;
+}
 .CardNosotros {
   background-color: white;
   max-width: 1000px;
@@ -82,13 +83,9 @@ main {
 .CardNosotros h2 {
   text-align: center;
   margin-bottom: 25px;
+  margin-left: 220px;
 }
 
-.CardNosotros p{
-  margin-left: 320px;
-  margin-top: -170px;
-  text-align: justify;
-}
 .CardNosotros .contenido {
   display: flex;
   align-items: flex-start;
@@ -100,9 +97,15 @@ main {
   width: 300px;
   border-radius: 10px;
   flex-shrink: 0;
+  margin-top: -40px;
 }
 
-
+.CardContacto p {
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  
+}
 .CardContacto{
   background-color: white;
   max-width: 1000px;
@@ -117,17 +120,21 @@ main {
   width: 300px;
   border-radius: 10px;
   flex-shrink: 0;
+  margin-top: -70px;
 }
+
 
 .CardContacto p {
   flex: 1;
   line-height: 1.5;
   text-align: justify;
+  margin-left: 10px;
 }
 
 .CardContacto h2{
   text-align: center;
   margin-bottom: 25px;
+  margin-left: 90px;
 }
 .CardContacto .contenido{
   display: flex;
@@ -206,6 +213,8 @@ main {
 
 /* profesionales */
 
+
+
 .headerProfesional{
   display: flex;
   justify-content: space-between;
@@ -213,17 +222,28 @@ main {
   background-color: rgb(48, 132, 211);
   font-size: large;
   padding: 10px 20px;
-  margin-bottom: -10px;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  margin-bottom: 50px;
+}
+
+.grid {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;          /* ✔ Existe */
+  flex-direction: column; /* ✔ Coloca uno debajo del otro */
+  align-items: center;    /* ✔ Centra horizontalmente */
+  justify-content: center;/* ✔ Centra verticalmente si hace falta */
 }
 
 
+
 .card {
-  margin-top: 150px;
+  width: 50%;
+  margin-top: 50px;
   background: #fff;
   border-radius: 15px;
   padding: 20px;
@@ -268,6 +288,11 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+
+.Titulodecabecera{
+  margin-left: 50px;
+}
+
 .form label {
   display: block;
   margin: 10px 0 5px;
@@ -496,6 +521,7 @@ button:hover {
   color: #222;
 }
 
+
 /* Formulario */
 .formHeader{
   display: flex;
@@ -518,6 +544,130 @@ button:hover {
 }
 
 /* grilla */
+
+.grillaTitulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seccion-dias, .seccion-horarios {
+    margin-bottom: 30px;
+}
+
+.seccion-dias h3, .seccion-horarios h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dia, .horario {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.dia.libre, .horario.libre {
+    background-color: white;
+    border-color: #4CAF50;
+}
+
+.dia.libre:hover, .horario.libre:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.05);
+}
+
+.dia.ocupado, .horario.ocupado {
+    background-color: red;
+    border-color: #b42c22;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.dia.seleccionado, .horario.seleccionado {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #2E7D32;
+    transform: scale(1.1);
+}
+
+.leyenda {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cuadro {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 5px;
+    border: 1px solid #ccc;
+}
+
+.libre { background-color: #e8f5e8; }
+.ocupado-cuadro { background-color: #ffebee; }
+.seleccionado-cuadro { background-color: #4CAF50; }
+
+.acciones {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-confirmar, .btn-volver {
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-confirmar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-confirmar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn-volver {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-volver:hover {
+    background-color: #545b62;
+}
+
+.cargando, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.error {
+    color: #f44336;
+}
+
+#fechaSeleccionadaTexto {
+    font-weight: bold;
+    color: #4CAF50;
+}
 
 .grilla body{
   display: flex;
@@ -585,13 +735,64 @@ button:hover {
   background-color: #e6f7ff;
 }
 
+/*ListaPacientes */
+
+.BuscadorPacientes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BuscadorPacientes input{
+  font-size: 20px;
+  height: 30px;
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+}
 
 
+/* Estilo Base para todas las tarjetas (ejemplo) */
 
+#listaPacientes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.tarjeta-paciente {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 80%;  
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid gray; /* Borde predeterminado */
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: rgb(237, 238, 224);
+}
 
+.tarjeta-paciente button{
+  margin-left: 20px;
+}
 
+.tarjeta-paciente h3{
+  margin-left: 10px;
+  font-size: 30px;
+}
 
+.tarjeta-paciente p{
+  margin-left: 50px;
+}
 
+/* Estado: En Espera de Confirmación */
+.estado-en-espera {
+    background-color: #fff3cd; /* Amarillo claro */
+    border-left-color: #ffc107; /* Amarillo oscuro */
+}
 
-
+/* Estado: Confirmado */
+.estado-confirmado {
+    background-color: #d4edda; /* Verde claro */
+    border-left-color: #28a745; /* Verde oscuro */
+}
