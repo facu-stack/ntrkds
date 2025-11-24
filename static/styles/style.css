@@ -1,0 +1,907 @@
+body {
+  background-color: lightblue;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/*index*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  padding: 10px 40px;
+  color: white !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.logo h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.header button {
+  background-color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: black;
+}
+
+.header button:hover {
+  background-color: #f0f0f0;
+}
+
+/* CARD NOSOTROS */
+main {
+  padding: 40px 20px;
+  display: grid;
+  place-items: center;
+  gap: 25px;
+}
+
+.CardNosotros p{
+  margin-left: 320px;
+  margin-top: -170px;
+  text-align: justify;
+}
+.CardNosotros {
+  background-color: white;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: aparecer 0.8s ease;
+
+}
+
+.CardNosotros h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-left: 220px;
+}
+
+.CardNosotros .contenido {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.CardNosotros img {
+  width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-top: -40px;
+}
+
+.CardContacto p {
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  
+}
+.CardContacto{
+  background-color: white;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: aparecer 0.8s ease;
+
+}
+
+.CardContacto img {
+  width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-top: -70px;
+}
+
+
+.CardContacto p {
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  margin-left: 10px;
+}
+
+.CardContacto h2{
+  text-align: center;
+  margin-bottom: 25px;
+  margin-left: 90px;
+}
+.CardContacto .contenido{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #3084d3; /* Azul principal */
+  color: white;
+  text-align: center;
+  padding: 40px 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  max-width: 250px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.footer-contacto h4,
+.footer-redes h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-contacto p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  background-color: #cce4f9;
+}
+
+.footer-copy {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 15px;
+  padding-top: 10px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+
+/* profesionales */
+
+
+
+.headerProfesional{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  font-size: large;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.grid {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;          /* ✔ Existe */
+  flex-direction: column; /* ✔ Coloca uno debajo del otro */
+  align-items: center;    /* ✔ Centra horizontalmente */
+  justify-content: center;/* ✔ Centra verticalmente si hace falta */
+}
+
+
+
+.card {
+  width: 50%;
+  margin-top: 50px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+  width: 250px;
+
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #62A87C;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4C8660;
+}
+
+/* registro */
+
+.formHeader{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.formularioRegistro, .datosdelpaciente {
+  background-color: white;
+  width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.Titulodecabecera{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(48, 132, 211);
+  padding-left: 50px;
+  top: 0;
+  z-index: 100;
+}
+
+.form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.form input, .form select, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.confirm {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 50px;
+  border-radius: 50px;
+  width: 500px;
+  position: fixed;
+  left: 350px;
+  top: 100px;
+}
+
+.datosdelpaciente {
+  display: none;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* Fondo general */
+.loginBody {
+  background-color: #add8e6;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor del formulario */
+.cardInicioSesion {
+  background-color: white;
+  width: 380px;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: aparecer 0.8s ease;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cardInicioSesion h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Labels */
+.cardInicioSesion label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.cardInicioSesion input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardInicioSesion input:focus {
+  border-color: #5fa87f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(95, 168, 127, 0.5);
+}
+
+/* Botón */
+.inicioSesion {
+  width: 100%;
+  background-color: #5fa87f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inicioSesion:hover {
+  background-color: #4d926d;
+  transform: scale(1.05);
+}
+
+
+/*Pagina de inicio*/
+/* Fondo general */
+.principalBody {
+  background-color: #add8e6;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HEADER --- */
+.HeaderInicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  padding: 10px 30px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo y texto */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 13px;
+  margin: 0;
+  color: #f0f0f0;
+}
+
+/* Icono de usuario */
+.IconoUsuario {
+ margin-right: 50px;
+}
+
+
+.IconoUsuario img {
+  border-radius: 50%;
+  background-color: white;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.IconoUsuario img:hover {
+  transform: scale(1.1);
+}
+
+/* --- TARJETAS PRINCIPALES --- */
+.contenedorTarjetas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  gap: 40px;
+}
+
+.TarjetaPedirCita {
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  width: 30%;
+  max-width: 700px;
+  padding: 30px 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.TarjetaPedirCita:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.TarjetaPedirCita img {
+  height: 200px;
+}
+
+.TarjetaPedirCita h2 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #222;
+}
+
+
+/* Formulario */
+.formHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(48, 132, 211);
+  font-size: large;
+  padding: 10px 20px;
+  margin-bottom: -10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.formularioRegistro{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* grilla */
+
+.grillaTitulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seccion-dias, .seccion-horarios {
+    margin-bottom: 30px;
+}
+
+.seccion-dias h3, .seccion-horarios h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dia, .horario {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.dia.libre, .horario.libre {
+    background-color: white;
+    border-color: #4CAF50;
+}
+
+.dia.libre:hover, .horario.libre:hover {
+    background-color: #c8e6c9;
+    transform: scale(1.05);
+}
+
+.dia.ocupado, .horario.ocupado {
+    background-color: red;
+    border-color: #b42c22;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.dia.seleccionado, .horario.seleccionado {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #2E7D32;
+    transform: scale(1.1);
+}
+
+.leyenda {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cuadro {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 5px;
+    border: 1px solid #ccc;
+}
+
+.libre { background-color: #e8f5e8; }
+.ocupado-cuadro { background-color: #ffebee; }
+.seleccionado-cuadro { background-color: #4CAF50; }
+
+.acciones {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-confirmar, .btn-volver {
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-confirmar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-confirmar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.btn-volver {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-volver:hover {
+    background-color: #545b62;
+}
+
+.cargando, .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.error {
+    color: #f44336;
+}
+
+#fechaSeleccionadaTexto {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.grilla body{
+  display: flex;
+
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 10px;
+  justify-content: center;
+
+ 
+}
+.horario {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.horario:hover {
+  background-color: #e6f7ff;
+}
+
+.ocupado {
+  background-color: #ff4d4d !important;
+  color: white;
+  cursor: not-allowed;
+}
+
+.fechas.seleccionado {
+  background-color: #32cd32 !important;
+  color: white;
+}
+
+.leyenda {
+  margin-top: 20px;
+}
+
+.cuadro {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border: 2px solid #ccc;
+}
+
+.libre { background-color: white; }
+.ocupado-cuadro { background-color: #ff4d4d; }
+.seleccionado-cuadro { background-color: #32cd32; }
+
+.fechas{
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.fechas:hover{
+  background-color: #e6f7ff;
+}
+
+/*ListaPacientes */
+
+.BuscadorPacientes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BuscadorPacientes input{
+  font-size: 20px;
+  height: 30px;
+  padding: 10px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+
+/* Estilo Base para todas las tarjetas (ejemplo) */
+
+#listaPacientes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjeta-paciente {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 80%;  
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid gray; /* Borde predeterminado */
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: rgb(237, 238, 224);
+}
+
+.tarjeta-paciente button{
+  margin-left: 20px;
+}
+
+.tarjeta-paciente h3{
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.tarjeta-paciente p{
+  margin-left: 50px;
+}
+
+/* Estado: En Espera de Confirmación */
+.estado-en-espera {
+    background-color: #fff3cd; /* Amarillo claro */
+    border-left-color: #ffc107; /* Amarillo oscuro */
+}
+
+/* Estado: Confirmado */
+.estado-confirmado {
+    background-color: #d4edda; /* Verde claro */
+    border-left-color: #28a745; /* Verde oscuro */
+}
+
+/*Anamnesis*/
+
+/* Contenedor general */
+.anamnesisDiv {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta del formulario */
+#formAnamnesis {
+  display: flex; /* Habilita el modo flex */
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+  gap: 20px;
+  align-items:normal;
+  text-align: left;
+  background-color: white;
+  width: 400px;
+  padding: 50px; 
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+#formAnamnesis h1 {
+  margin-bottom: 50px;
+  
+}
+
+#formAnamnesis h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Input checkbox y texto alineados */
+.form-item {
+  display: inline-block; /* Convierte el div de bloque a un elemento que fluye en línea, pero respeta ancho y alto */
+  margin-right: 20px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+/* Checkboxes más grandes */
+.form-item input[type="checkbox"] {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+/* Inputs de texto */
+#formAnamnesis input[type="text"] {
+  width: 370px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+
+/* Ficha de paciente*/
+
+.formPaciente{
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.datosAntropométricos{
+  background-color: white;
+  border-radius: 30px;
+  width: 500px;
+  padding: 30px;
+  justify-items: left;
+  margin-bottom: 50px;
+}
+
+.Antecedentes{
+  background-color: white;
+  border-radius: 30px;
+  width: 500px;
+  padding: 30px;
+  justify-items: left;
+
+}
+
+.botonGuardar{
+  margin-bottom: 50px;
+  
+}
+
+.cancelarEdicion{
+  width: 70px;
+  justify-content: center;
+  color: white !important;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #ff4d4d;
+  display: inline-block;
+}
