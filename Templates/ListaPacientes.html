@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutri Kids</title>
+  <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+<body>
+
+  <div class="Titulo de cabecera">
+    <h1>Pacientes de hoy</h1>
+  </div>
+
+ <div class="BuscadorPacientes">
+    <input 
+    type="text" 
+    id="buscador" 
+    placeholder="Buscar por nombre o DNI...">
+  </div>
+
+
+  <div id="listaPacientes" class="lista-pacientes"></div>
+
+  <script src="{{ url_for('static', filename='Script/pacientes.js') }}"></script>
+
+</body>

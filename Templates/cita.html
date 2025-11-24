@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Ficha Médica de {{ paciente.Nombre }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    
+    <div class="Titulodecabecera">
+        <h1>Editar Ficha Médica para {{ paciente.Nombre }} {{ paciente.Apellido }}</h1>
+    </div>
+    
+    <div class="formPaciente">
+        <form method="POST">
+        
+        
+        <div class="datosAntropométricos">
+            <h2>Datos Antropométricos</h2>
+            <label for="peso">Peso Actual (kg):</label>
+            <input type="number" step="0.1" name="peso" value="{{ ficha.PesoActual if ficha else '' }}">
+            <div>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" step="1" name="altura" value="{{ ficha.Altura if ficha else '' }}">
+            </div>
+             <div>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" step="1" name="altura" value="{{ ficha.Altura if ficha else '' }}">
+            </div>
+        </div>
+
+       
+
+
+        
+        
+        <div class="Antecedentes">
+            <h2>Antecedentes</h2>
+            <label for="alergias">Alergias / Restricciones:</label>
+            <textarea name="alergias">{{ ficha.AlergiasID if ficha else '' }}</textarea>
+
+            <div>
+                <input type="checkbox" id="diabetes" name="diabetes" 
+                    {{ 'checked' if ficha and ficha.Diabetes else '' }}>
+                <label for="diabetes">Padece Diabetes</label>
+            </div>
+        
+            <div>
+                <input type="checkbox" id="hipertension" name="hipertension" 
+                    {{ 'checked' if ficha and ficha.Hipertension else '' }}>
+                <label for="hipertension">Padece Hipertensión</label>
+            </div>
+
+            
+        </div>
+
+        <div class="botonGuardar">
+            <button type="submit">Guardar Cambios</button>
+            <div class="cancelarEdicion">
+                <a href="{{ url_for('home') }}">Cancelar</a>
+            </div>
+        </div>
+        
+        
+    </form>
+    </div>
+</body>
+</html>

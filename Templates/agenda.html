@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutri Kids - Agenda</title>
+  <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+
+<body>
+    <div class="grillaTitulo">
+        <h2>Disponibilidad del Especialista</h2>
+        <p id="textoInstruccion">Seleccioná un día:</p>
+    </div>
+
+    <!-- Sección de días -->
+    <div class="seccion-dias">
+        <h3>Días Disponibles</h3>
+        <div class="grilla" id="grillaDias"></div>
+    </div>
+
+    <!-- Sección de horarios (inicialmente oculta) -->
+    <div class="seccion-horarios" id="seccionHorarios" style="display: none;">
+        <h3 id="tituloHorarios">Horarios para: <span id="fechaSeleccionadaTexto"></span></h3>
+        <div class="grilla" id="grillaHorarios"></div>
+    </div>
+
+    <div class="leyenda">
+        <span class="cuadro libre"></span> Libre
+        <span class="cuadro ocupado-cuadro"></span> Ocupado
+        <span class="cuadro seleccionado-cuadro"></span> Seleccionado
+    </div>
+
+    <div class="acciones">
+        <button id="btnVolverDia" class="btn-volver" style="display: none;">← Volver a Días</button>
+        <button id="btnConfirmar" class="btn-confirmar" disabled>Confirmar Turno</button>
+        <button onclick="window.location.href='/paginaprincipal'" class="btn-volver">Volver al Inicio</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='Script/scriptagenda.js') }}"></script>
+</body>
+</html>

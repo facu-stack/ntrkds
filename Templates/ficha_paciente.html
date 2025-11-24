@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha Médica de {{ paciente.Nombre }}</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+<body>
+    
+    <div class="Titulodecabecera">
+        <h1>Ficha Médica de {{ paciente.Nombre }} {{ paciente.Apellido }}</h1>
+    </div>
+    
+    <div class="formPaciente">
+
+        <!-- Ya no es un formulario -->
+        
+        <div class="datosAntropométricos">
+            <h2>Datos Antropométricos</h2>
+
+            <p><strong>Peso Actual:</strong> {{ ficha.PesoActual if ficha else 'Sin datos' }} kg</p>
+
+            <p><strong>Altura:</strong> {{ ficha.Altura if ficha else 'Sin datos' }} cm</p>
+        </div>
+
+        <div class="Antecedentes">
+            <h2>Antecedentes</h2>
+
+            <p><strong>Alergias / Restricciones:</strong></p>
+            <p>{{ ficha.AlergiasID if ficha else 'Sin datos' }}</p>
+
+            <p>
+                <strong>Padece Diabetes:</strong>
+                {{ 'Sí' if ficha and ficha.Diabetes else 'No' }}
+            </p>
+
+            <p>
+                <strong>Padece Hipertensión:</strong>
+                {{ 'Sí' if ficha and ficha.Hipertension else 'No' }}
+            </p>
+        </div>
+
+        <div class="cancelarEdicion" style="margin-top: 20px;">
+            <a href="{{ url_for('home') }}">Volver</a>
+        </div>
+
+    </div>
+</body>
+</html>
